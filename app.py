@@ -8,42 +8,42 @@ st.set_page_config(
     layout="centered",
 )
 
-THRESHOLD_POTABILITY = 0.69
+THRESHOLD = 0.5
 
 # Load Artifacts
 def load_artifacts():
     try:
         preprocess = load("artifacts/preprocessing_pipeline.pkl")
         clf_model  = load("artifacts/rf_classifier_model.pkl")
-        anom_model = load("artifacts/anomaly_detection_model.pkl")
-        return preprocess, clf_model, anom_model
+        return preprocess, clf_model
     except Exception as e:
         st.error(f"Gagal memuat model: {e}")
-        return None, None, None
+        return None, None
 
-PREPROCESSOR, CLF_MODEL, ANOM_MODEL = load_artifacts()
+PREPROCESSOR, CLF_MODEL = load_artifacts()
 
 def run_inferece(data_input: pd.DataFrame) -> dict:
     # preprocessing
     X = PREPROCESSOR.transform(data_input)
-
     # classification
-    potability_probs = CLF_MODEL.predict_proba(X)[0, 1]
-    potability_pred = int(potability_probs >= THRESHOLD_POTABILITY)
+    probs = CLF_MODEL.predict_proba(X)[0, 1]
+    pred = int(probs >= THRESHOLD)
+
+    return {"probability": probs, "prediction": pred}
 
 # Streamlit UI
-st.title("Aplikasi Risk Assessment Monitoring Kelayakan Air 💧")
-st.markdown("Masukkan data setiap parameter kualitas air untuk melakukan Risk Assessment Kelayakan Air**!")
+st.title("Dropout Risk Assessment App")
+st.markdown("Input Data Mahasiswa!")
 
 # Cek status model
-if CLF_MODEL is not None and ANOM_MODEL is not None:
+if CLF_MODEL is not None:
     st.caption(f"Status: Model sudah siap.")
 else:
     st.error("MODEL GAGAL DIMUAT. Periksa folder artifacts.")
     st.stop()
 
 # Input Form
-st.subheader("Input Data Parameter Kualitas Air")
+st.subheader(" ")
 
 columns = [
     "Marital status", "Application mode", "Application order", "Course",
@@ -129,12 +129,12 @@ if st.button("Prediksi Kelayakan Air", type="primary"):
         st.write("### Hasil")
 
         # Risk Level
-        st.subheader("Risk Level dan Rekomendasi:")
+        st.subheader("Assessment Result:")
 
-        risk_label = result["risk_label"]
+        assessment_label = result["risk_label"]
         recommendation = result["recommendation"]
 
-        st.write(f"**Risk Label:** {risk_label}")
+        st.write(f"**Assessment Label:** {assessment_label}")
         st.write(f"**Rekomendasi:** {recommendation}")
 
     except Exception as e:
