@@ -46,59 +46,67 @@ else:
 st.subheader("Input Data Parameter Kualitas Air")
 
 columns = [
-        "ph", "Hardness", "Solids", 
-        "Chloramines", "Sulfate", "Conductivity", 
-        "Organic_carbon", "Trihalomethanes", "Turbidity"
+    "Marital status", "Application mode", "Application order", "Course",
+    "Attendance", "Previous qualification", "Previous qualification (grade)", "nationality",
+    "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation",
+    "Admission grade", "Displaced", "Educational special needs",
+    "Debtor", "Tuition fees up to date", "Gender", "Scholarship holder",
+    "Age at enrollment", "International",
+    "Curricular units 1st sem (credited)", "Curricular units 1st sem (enrolled)", "Curricular units 1st sem (evaluations)",
+    "Curricular units 1st sem (approved)", "Curricular units 1st sem (grade)", "Curricular units 1st sem (without evaluations)",
+    "Curricular units 2nd sem (credited)", "Curricular units 2nd sem (enrolled)", "Curricular units 2nd sem (evaluations)",
+    "Curricular units 2nd sem (approved)", "Curricular units 2nd sem (grade)", "Curricular units 2nd sem (without evaluations)",
+    "Unemployment rate", "Inflation rate", "GDP"
 ]
 
 ## Input data numerik
-marital_status = st.number_input("ph", min_value=0.1, max_value=14.0, value=7.0)
-application_mode = st.number_input("Hardness", min_value=0.1, max_value=1000.0, value=200.0)
-application_order = st.number_input("Solids", min_value=0.1, max_value=100000.0, value=20000.0)
-course = st.number_input("Chloramines", min_value=0.1, max_value=100.0, value=7.0)
-attendance = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-prev_qual = st.number_input("Conductivity", min_value=0.1, max_value=1000.0, value=400.0)
-prev_qual_grade = st.number_input("Organic_carbon", min_value=0.1, max_value=1000.0, value=15.0)
-nationality = st.number_input("Trihalomethanes", min_value=0.1, max_value=1000.0, value=80.0)
-mothers_qual = st.number_input("Turbidity", min_value=0.1, max_value=100.0, value=4.0)
-fathers_qual = st.number_input("ph", min_value=0.1, max_value=14.0, value=7.0)
-mothers_occu = st.number_input("Hardness", min_value=0.1, max_value=1000.0, value=200.0)
-fathers_occu = st.number_input("Solids", min_value=0.1, max_value=100000.0, value=20000.0)
-admission_grade = st.number_input("Chloramines", min_value=0.1, max_value=100.0, value=7.0)
-displaced = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-edu_special_needs = st.number_input("Conductivity", min_value=0.1, max_value=1000.0, value=400.0)
-debtor = st.number_input("Organic_carbon", min_value=0.1, max_value=1000.0, value=15.0)
-tuition_uptodate = st.number_input("Trihalomethanes", min_value=0.1, max_value=1000.0, value=80.0)
-gender = st.number_input("Turbidity", min_value=0.1, max_value=100.0, value=4.0)
-scholarship_holder = st.number_input("Hardness", min_value=0.1, max_value=1000.0, value=200.0)
-age_at_enroll = st.number_input("Solids", min_value=0.1, max_value=100000.0, value=20000.0)
-international = st.number_input("Chloramines", min_value=0.1, max_value=100.0, value=7.0)
+marital_status = st.number_input("Marital status", min_value=0.1, max_value=14.0, value=7.0)
+application_mode = st.number_input("Application mode", min_value=0.1, max_value=1000.0, value=200.0)
+application_order = st.number_input("Application order", min_value=0.1, max_value=100000.0, value=20000.0)
+course = st.number_input("Course", min_value=0.1, max_value=100.0, value=7.0)
+attendance = st.number_input("Attendance", min_value=0.1, max_value=1000.0, value=300.0)
+prev_qual = st.number_input("Previous qualification", min_value=0.1, max_value=1000.0, value=400.0)
+prev_qual_grade = st.number_input("Previous qualification (grade)", min_value=0.1, max_value=1000.0, value=15.0)
+nationality = st.number_input("Nationality", min_value=0.1, max_value=1000.0, value=80.0)
+mothers_qual = st.number_input("Mother's qualification", min_value=0.1, max_value=100.0, value=4.0)
+fathers_qual = st.number_input("Father's qualification", min_value=0.1, max_value=14.0, value=7.0)
+mothers_occu = st.number_input("Mother's occupation", min_value=0.1, max_value=1000.0, value=200.0)
+fathers_occu = st.number_input("Father's occupation", min_value=0.1, max_value=100000.0, value=20000.0)
+admission_grade = st.number_input("Admission grade", min_value=0.1, max_value=100.0, value=7.0)
+displaced = st.number_input("Displaced", min_value=0.1, max_value=1000.0, value=300.0)
+edu_special_needs = st.number_input("Educational special needs", min_value=0.1, max_value=1000.0, value=400.0)
+debtor = st.number_input("Debtor", min_value=0.1, max_value=1000.0, value=15.0)
+tuition_uptodate = st.number_input("Tuition fees up to date", min_value=0.1, max_value=1000.0, value=80.0)
+gender = st.number_input("Gender", min_value=0.1, max_value=100.0, value=4.0)
+scholarship_holder = st.number_input("Scholarship holder", min_value=0.1, max_value=1000.0, value=200.0)
+age_at_enroll = st.number_input("Age at enrollment", min_value=0.1, max_value=100000.0, value=20000.0)
+international = st.number_input("International", min_value=0.1, max_value=100.0, value=7.0)
 
-curr_units_1_credited = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_enrolled = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_eval = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_approved = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_grade = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_without_eval = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_1_credited = st.number_input("Curricular units 1st sem (credited)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_1_enrolled = st.number_input("Curricular units 1st sem (enrolled)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_1_eval = st.number_input("Curricular units 1st sem (evaluations)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_1_approved = st.number_input("Curricular units 1st sem (approved)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_1_grade = st.number_input("Curricular units 1st sem (grade)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_1_without_eval = st.number_input("Curricular units 1st sem (without evaluations)", min_value=0.1, max_value=1000.0, value=300.0)
 
-curr_units_2_credited = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_enrolled = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_eval = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_approved = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_grade = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_without_eval = st.number_input("Sulfate", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_2_credited = st.number_input("Curricular units 2nd sem (credited)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_2_enrolled = st.number_input("Curricular units 2nd sem (enrolled)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_2_eval = st.number_input("Curricular units 2nd sem (evaluations)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_2_approved = st.number_input("Curricular units 2nd sem (approved)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_2_grade = st.number_input("Curricular units 2nd sem (grade)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_2_without_eval = st.number_input("Curricular units 2nd sem (without evaluations)", min_value=0.1, max_value=1000.0, value=300.0)
 
-unemployement_rate = st.number_input("Conductivity", min_value=0.1, max_value=1000.0, value=400.0)
-inflation_rate = st.number_input("Organic_carbon", min_value=0.1, max_value=1000.0, value=15.0)
-gdp = st.number_input("Trihalomethanes", min_value=0.1, max_value=1000.0, value=80.0)
+unemployement_rate = st.number_input("Unemployment rate", min_value=0.1, max_value=1000.0, value=400.0)
+inflation_rate = st.number_input("Inflation rate", min_value=0.1, max_value=1000.0, value=15.0)
+gdp = st.number_input("GDP", min_value=0.1, max_value=1000.0, value=80.0)
 
 # Menyimpan data ke dalam DataFrame
 data_input = pd.DataFrame([[
     marital_status, application_mode, application_order, course,
-    attendance, prev_qual, prev_qual_grade, nationality, 
-    mothers_qual, fathers_qual, mothers_occu, fathers_occu, 
-    admission_grade, displaced, edu_special_needs, 
-    debtor, tuition_uptodate, gender, scholarship_holder, 
+    attendance, prev_qual, prev_qual_grade, nationality,
+    mothers_qual, fathers_qual, mothers_occu, fathers_occu,
+    admission_grade, displaced, edu_special_needs,
+    debtor, tuition_uptodate, gender, scholarship_holder,
     age_at_enroll, international,
     curr_units_1_credited, curr_units_1_enrolled, curr_units_1_eval,
     curr_units_1_approved, curr_units_1_grade, curr_units_1_without_eval,
