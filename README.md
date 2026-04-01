@@ -9,7 +9,7 @@ Jaya Jaya Institut merupakan salah satu institusi pendidikan perguruan tinggi ya
 Berdasarkan kebutuhan bisnis yang sedang dihadapi, maka fokus utama pada proyek ini adalah membuat dashboard sebagai platform monitoring metrik-metrik penting untuk kebutuhan analisis screening siswa yang memerlukan bimbingan khusus sehingga dapat menurunkan peluang mereka terjerumus ke jalan dropout. Institusi juga perlu menyusun strategi yang tepat untuk dapat menjaga kualitas belajar para siswa. 
 
 Berikut pertanyaan bisnis yang diharapkan dapat terjawab melalui proyek ini.
-* Bagaimana pengaruh Kondisi Ekonomi Mahasiswa terhadap Status Kelulusan?
+* Bagaimana pengaruh Kondisi Finansial Mahasiswa terhadap Status Kelulusan?
 * Bagaimana pengaruh Kondisi Ekonomi Makro terhadap Status Kelulusan?
 * Bagaimana pengaruh Capaian Akademik Mahasiswa terhadap Status Kelulusan?
 * Apa saja 10 faktor yang berpengaruh signifikan terhadap tingginya probabilitas mahasiswa dapat mengalami dropout?
