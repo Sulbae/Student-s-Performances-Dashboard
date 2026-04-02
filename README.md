@@ -118,12 +118,10 @@ Berdasarkan hasil analisis dalam proyek ini, maka dapat disimpulkan bahwa:
 
 Berdasarkan temuan-temuan tersebut, berikut adalah rekomendasi strategis yang potensial untuk diterapkan:
 
-1. Menekan Angka Early-Stage Churn
-    - Mengembangkan program mentorship yang sistematis dan terstruktur selama satu tahun pertama kerja yang dapat memberikan bimbingan profesional dan kepastian jenjang karir yang jelas.
-2. Membuat Kebijakan Kompensasi yang Berbasis Data
-    - Perusahaan harus bersedia memberikan kompensasi sesuai dengan beban kerja dan kebutuhan karyawan sehingga dapat terus memotivasi karyawan untuk dapat memiliki kinerja yang tinggi dan stabil.
-3. Mempertahankan Talenta dengan Kinerja Tinggi
-    - Memberikan penawaran benefit non-finansial lebih untuk para High Performer Talent seperti kepastian promosi dan kenaikan gaji yang adil.
-4. Peningkatan Kualitas Lingkungan Kerja dan Engagement
-    - Melakukan pengawasan rutin/berkala melalui riset internal terkait kesesuaian ekspektasi dan kebutuhan kerja karyawan dengan kondisi nyata di lapangan.
-    - Mengembangkan lingkungan/budaya kerja yang dinamis berdasarkan hasil riset (tetapi tetap berprinsip pada visi dan misi perusahaan).
+1. Early Warning System
+    - Apabila mahasiswa terindikasi sebagai Debtor, segera lakukan intervensi untuk meminimalisir risiko Dropout. Intervensi yang dapat dilakukan diantaranya:
+        * Konseling khusus perorangan.
+        * Pemberian keringanan khusus seperti skema pembayaran cicilan.
+2. Program Bantuan Finansial
+    - 
+
