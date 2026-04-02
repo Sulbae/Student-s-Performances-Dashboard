@@ -118,8 +118,8 @@ Berdasarkan hasil analisis dalam proyek ini, maka dapat disimpulkan bahwa:
 
 Berdasarkan temuan-temuan tersebut, berikut adalah rekomendasi strategis yang potensial untuk diterapkan:
 
-1. Early Warning System
-    - Apabila mahasiswa terindikasi sebagai Debtor, segera lakukan intervensi seperti menyediakan layanan konseling untuk meminimalisir risiko Dropout akibat masalah finansial yang dihadapi.
+1. Penerapan Early Support System
+    - Apabila mahasiswa terindikasi sebagai Debtor dan/atau tercatat pernah telat melakukan pembayaran, segera lakukan intervensi dini seperti menyediakan layanan konseling untuk meminimalisir risiko Dropout akibat masalah finansial yang dihadapi.
         
 2. Program Bantuan Finansial
     - * Pemberian keringanan khusus seperti skema pembayaran cicilan.
