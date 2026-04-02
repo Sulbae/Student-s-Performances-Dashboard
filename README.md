@@ -11,7 +11,7 @@ Berdasarkan kebutuhan bisnis yang sedang dihadapi, maka fokus utama pada proyek 
 Berikut pertanyaan bisnis yang diharapkan dapat terjawab melalui proyek ini.
 * Apa saja faktor-faktor yang berpengaruh signifikan terhadap tingginya probabilitas mahasiswa dapat mengalami dropout?
 * Bagaimana pengaruh Capaian Akademik Mahasiswa terhadap kecenderungan Dropout?
-* Bagaimana pengaruh faktor non-akademik mahasiswa terhadap kecenderungan Dropout? 
+* Bagaimana pengaruh faktor Non-Akademik mahasiswa terhadap kecenderungan Dropout? 
 * Bagaimana strategi yang harus dijalankan oleh kampus untuk menekan angka dropout mahasiswa?
 
 ### Cakupan Proyek
