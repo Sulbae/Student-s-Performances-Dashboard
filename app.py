@@ -38,7 +38,7 @@ st.markdown("Input Data Mahasiswa!")
 
 # Cek status model
 if CLF_MODEL is not None:
-    st.caption(f"Status: Model sudah siap.")
+    st.caption("Status: Model sudah siap.")
 else:
     st.error("MODEL GAGAL DIMUAT. Periksa folder artifacts.")
     st.stop()
@@ -47,7 +47,7 @@ else:
 st.subheader(" ")
 
 columns = [
-    "Marital status", "Application mode", "Application order", "Course",
+    "Student ID", "Marital status", "Application mode", "Application order", "Course",
     "Attendance", "Previous qualification", "Previous qualification (grade)", "Nationality",
     "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation",
     "Admission grade", "Displaced", "Educational special needs",
@@ -368,7 +368,7 @@ scholarship_holder = st.selectbox(
 
 # Menyimpan data ke dalam DataFrame
 data_input = pd.DataFrame([[
-    marital_status, application_mode, application_order, course,
+    student_id,marital_status, application_mode, application_order, course,
     attendance, prev_qual, prev_qual_grade, nationality,
     mothers_qual, fathers_qual, mothers_occu, fathers_occu,
     admission_grade, displaced, edu_special_needs,
