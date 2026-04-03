@@ -9,35 +9,50 @@ st.set_page_config(
     layout="centered",
 )
 
-THRESHOLD = 0.5
+THRESHOLD = 0.6
 
 # Load Artifacts
 def load_artifacts():
     try:
-        preprocess = load("artifacts/preprocessing_pipeline.pkl")
-        clf_model  = load("artifacts/rf_classifier_model.pkl")
-        return preprocess, clf_model
+        bundle = load("student_dropout_model.pkl")
+        model = bundle['model']
+        y_le = bundle['label_encoder']
+        return model, y_le
     except Exception as e:
         st.error(f"Gagal memuat model: {e}")
         return None, None
 
-PREPROCESSOR, CLF_MODEL = load_artifacts()
+MODEL, LABEL_ENCODER = load_artifacts()
 
 def run_inferece(data_input: pd.DataFrame) -> dict:
-    # preprocessing
-    X = PREPROCESSOR.transform(data_input)
-    # classification
-    probs = CLF_MODEL.predict_proba(X)[0, 1]
-    pred = int(probs >= THRESHOLD)
+    # Data preprocessing
+    df = data_input.copy()
+    ## Feature Selection
+    features_to_drop = [
+        "Marital status", "Application mode", "Course",
+        "Previous qualification", "Nationality",
+        "Mother's qualification", "Father's qualification",
+        "Mother's occupation", "Father's occupation", "Student ID"
+    ]
+    df = df.drop(columns=features_to_drop)
 
-    return {"probability": probs, "prediction": pred}
+    ## Feature Engineering
+    df['Application preference'] = df['Application order'].max() - df['Application order'] + 1
+    df.drop(columns=['Application order'], inplace=True)
+
+    # classification pipeline
+    probs = MODEL.predict_proba(df)[0, 1]
+    pred = int(probs >= THRESHOLD)
+    pred_label = LABEL_ENCODER.inverse_transform([pred])[0]
+
+    return {"probability": probs, "prediction": pred_label}
 
 # Streamlit UI
 st.title("Dropout Risk Assessment App")
 st.markdown("Input Data Mahasiswa!")
 
 # Cek status model
-if CLF_MODEL is not None:
+if MODEL is not None:
     st.caption("Status: Model sudah siap.")
 else:
     st.error("MODEL GAGAL DIMUAT. Periksa folder artifacts.")
@@ -408,11 +423,9 @@ if st.button("Prediksi Kelayakan Air", type="primary"):
         # Risk Level
         st.subheader("Assessment Result:")
 
-        assessment_label = result["risk_label"]
-        recommendation = result["recommendation"]
+        assessment_label = result["pred_label"]
 
         st.write(f"**Assessment Label:** {assessment_label}")
-        st.write(f"**Rekomendasi:** {recommendation}")
 
     except Exception as e:
         st.error(f"Terjadi kesalahan sistem: {e}")
