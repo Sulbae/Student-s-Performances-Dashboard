@@ -79,6 +79,8 @@ columns = [
 ]
 
 ## Input Personal Information
+st.markdown("### Personal Information")
+st.divider()
 ### 0. Student ID
 student_id = st.text_input("Student ID", placeholder="Type Student ID")
 
@@ -264,7 +266,8 @@ edu_special_needs = st.radio(
 )
 
 ## Input Academic Information
-
+st.markdown("### Academic Information")
+st.divider()
 course_options = [
     "Biofuel Production Technologies",
     "Animation and Multimedia Design",
@@ -370,7 +373,9 @@ unemployement_rate = st.number_input("Unemployment rate", min_value=0.0, max_val
 inflation_rate = st.number_input("Inflation rate", min_value=0.0, max_value=100.0, value=1.0)
 gdp = st.number_input("GDP", min_value=0.0, max_value=1_000_000.0, value=10_000.0)
 
-### Financial Information
+### Financial & Economic Information
+st.markdown("### Financial & Economic Information")
+st.divider()
 debtor = st.radio(
     "Debtor",
     options=[
