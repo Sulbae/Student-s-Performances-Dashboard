@@ -41,7 +41,7 @@ def run_inferece(data_input: pd.DataFrame) -> dict:
     df.drop(columns=['Application order'], inplace=True)
 
     # classification pipeline
-    probs = MODEL.predict_proba(df)[0, 1]
+    probs = MODEL.predict_proba(df)[0, 0]
     pred = int(probs >= THRESHOLD)
     pred_label = LABEL_ENCODER.inverse_transform([pred])[0]
 
@@ -420,12 +420,15 @@ if st.button("Prediksi Kelayakan Air", type="primary"):
 
         st.write("### Hasil")
 
-        # Risk Level
+        # Dropout Risk 
         st.subheader("Assessment Result:")
 
-        assessment_label = result["pred_label"]
+        assessment_label = result["prediction"]
 
-        st.write(f"**Assessment Label:** {assessment_label}")
+        if assessment_label == "Dropout":
+            st.write("**Risiko Dropout Tinggi!**")
+        else:
+            st.write("**Risiko Dropout Rendah!**")
 
     except Exception as e:
         st.error(f"Terjadi kesalahan sistem: {e}")
