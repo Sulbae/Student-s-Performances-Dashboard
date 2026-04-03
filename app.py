@@ -411,7 +411,7 @@ data_input = pd.DataFrame([[
 ]], columns=columns)
 
 # Tombol untuk menampilkan data
-if st.button("Prediksi Kelayakan Air", type="primary"):
+if st.button("Prediksi Risiko Dropout", type="primary"):
 
     start_time = time.time()
 
