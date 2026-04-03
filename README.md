@@ -49,15 +49,19 @@ Data Exploration
 |---Karakteristik Data
 |---Kelengkapan Data
 |---Distribusi Data
+|---Hubungan antar Data
 Data Cleaning
 |---Missing Value Handling
+Data Preprocessing
+|---Data Filtering
+|---Feature Engineering
+|---Data Encoding
 ```
 Eksplorasi dan Analisis Data
 ```
 Analisis Korelasi Antar Variabel Data 
-|---Observasi pengaruh Kondisi Ekonomi Mahasiswa terhadap Status Kelulusan
-|---Observasi pengaruh Kondisi Ekonomi Makro terhadap Status Kelulusan
-|---Observasi pengaruh Capaian Akademik Mahasiswa terhadap Status Kelulusan
+|---Observasi pengaruh Aspek Capaian Akademik terhadap kejadian Dropout
+|---Observasi pengaruh Aspek non-Akademik terhadap kejadian Dropout
 ```
 
 ## Business Dashboard
