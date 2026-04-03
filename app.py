@@ -61,6 +61,9 @@ columns = [
 ]
 
 ## Input Personal Information
+### 0. Student ID
+student_id = st.text_input("Student ID", placeholder="Type Student ID")
+
 ### 1. Marital status
 marital_status = st.selectbox(
     "Marital status",
@@ -71,22 +74,24 @@ marital_status = st.selectbox(
 )
 
 ### 2. Gender
-gender = st.selectbox(
+gender = st.radio(
     "Gender",
     options=[
         "Male", "Female"
-    ]
+    ],
+    horizontal=True
 )
 
 ### 3. Age at enrollment
 age_at_enroll = st.number_input("Age at enrollment", min_value=18, max_value=100, value=20)
 
 ### 4. International
-international = st.selectbox(
+international = st.radio(
     "International",
     options=[
         "Yes", "No"
-    ]
+    ],
+    horizontal=True
 )
 
 ### 5. Nationality
@@ -223,19 +228,21 @@ fathers_occu = st.number_input(
 )
 
 ### 8. Displaced
-displaced = st.selectbox(
+displaced = st.radio(
     "Displaced",
     options=[
         "Yes", "No"
-    ]
+    ],
+    horizontal=True
 )
 
 ### 9. Educational Special needs
-edu_special_needs = st.selectbox(
+edu_special_needs = st.radio(
     "Educational special needs",
     options=[
         "Yes", "No"
-    ]
+    ],
+    horizontal=True
 )
 
 ## Input Academic Information
@@ -269,11 +276,12 @@ course = st.selectbox(
 )
 
 ### 2. Attendance
-attendance = st.selectbox(
+attendance = st.radio(
     "Attendance",
     options=[
         "Daytime", "Evening"
-    ]
+    ],
+    horizontal=True
 )
 
 mode_options = [
@@ -345,30 +353,33 @@ inflation_rate = st.number_input("Inflation rate", min_value=0.0, max_value=100.
 gdp = st.number_input("GDP", min_value=0.0, max_value=1_000_000.0, value=10_000.0)
 
 ### Financial Information
-debtor = st.selectbox(
+debtor = st.radio(
     "Debtor",
     options=[
         "Yes", "No"
-    ]
+    ],
+    horizontal=True
 )
 
-tuition_uptodate = st.selectbox(
+tuition_uptodate = st.radio(
     "Tuition fees up to date",
     options=[
         "Yes", "No"
-    ]
+    ],
+    horizontal=True
 )
 
-scholarship_holder = st.selectbox(
+scholarship_holder = st.radio(
     "Scholarship holder",
     options=[
         "Yes", "No"
-    ]
+    ],
+    horizontal=True
 )
 
 # Menyimpan data ke dalam DataFrame
 data_input = pd.DataFrame([[
-    student_id,marital_status, application_mode, application_order, course,
+    student_id, marital_status, application_mode, application_order, course,
     attendance, prev_qual, prev_qual_grade, nationality,
     mothers_qual, fathers_qual, mothers_occu, fathers_occu,
     admission_grade, displaced, edu_special_needs,
