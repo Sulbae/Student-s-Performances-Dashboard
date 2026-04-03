@@ -415,13 +415,11 @@ if st.button("Prediksi Risiko Dropout", type="primary"):
 
     start_time = time.time()
 
-    st.write("### Data Input:")
+    st.subheader("Data Input:")
     st.dataframe(data_input)
   
     try:
         result = run_inferece(data_input)
-
-        st.write("### Hasil")
 
         # Dropout Risk 
         st.subheader("Assessment Result:")
