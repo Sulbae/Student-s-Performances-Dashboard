@@ -231,14 +231,14 @@ mothers_occu = st.selectbox(
 )
 
 ### 7. Father's Information
-fathers_qual = st.number_input(
+fathers_qual = st.selectbox(
     "Father's qualification",
     placeholder="Type to search...",
     options=qual_options,
     accept_new_options=True
 )
 
-fathers_occu = st.number_input(
+fathers_occu = st.selectbox(
     "Father's occupation",
     placeholder="Type to search...",
     options=occu_options,
