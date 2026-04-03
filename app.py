@@ -27,6 +27,7 @@ MODEL, LABEL_ENCODER = load_artifacts()
 def run_inferece(data_input: pd.DataFrame) -> dict:
     # Data preprocessing
     df = data_input.copy()
+
     ## Feature Selection
     features_to_drop = [
         "Marital status", "Application mode", "Course",
@@ -37,7 +38,9 @@ def run_inferece(data_input: pd.DataFrame) -> dict:
     df = df.drop(columns=features_to_drop)
 
     ## Feature Engineering
-    df['Application preference'] = df['Application order'].max() - df['Application order'] + 1
+    df['Application preference'] = (
+        df['Application order'].max() - df['Application order'] + 1
+    )
     df.drop(columns=['Application order'], inplace=True)
 
     # classification pipeline
