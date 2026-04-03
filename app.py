@@ -9,7 +9,7 @@ st.set_page_config(
     layout="centered",
 )
 
-THRESHOLD = 0.6
+THRESHOLD = 0.5
 
 # Load Artifacts
 def load_artifacts():
@@ -44,11 +44,11 @@ def run_inferece(data_input: pd.DataFrame) -> dict:
     df.drop(columns=['Application order'], inplace=True)
 
     # classification pipeline
-    probs = MODEL.predict_proba(df)[0, 0]
-    pred = int(probs >= THRESHOLD)
-    pred_label = LABEL_ENCODER.inverse_transform([pred])[0]
+    probs = MODEL.predict_proba(df)[0]
+    dropout_idx = list(LABEL_ENCODER.classes_).index("Dropout")
+    dropout_prob = probs[dropout_idx]
 
-    return {"probability": probs, "prediction": pred_label}
+    return {"probability": dropout_prob}
 
 # Streamlit UI
 st.title("Dropout Risk Assessment App")
@@ -424,9 +424,9 @@ if st.button("Prediksi Risiko Dropout", type="primary"):
         # Dropout Risk 
         st.subheader("Assessment Result:")
 
-        assessment_label = result["prediction"]
+        assessment_label = result["probability"]
 
-        if assessment_label == "Dropout":
+        if assessment_label >= THRESHOLD:
             st.write("### **Risiko Dropout Tinggi!**")
         else:
             st.write("### **Risiko Dropout Rendah!**")
