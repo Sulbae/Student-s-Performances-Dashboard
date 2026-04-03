@@ -427,9 +427,9 @@ if st.button("Prediksi Risiko Dropout", type="primary"):
         assessment_label = result["prediction"]
 
         if assessment_label == "Dropout":
-            st.write("**Risiko Dropout Tinggi!**")
+            st.write("### **Risiko Dropout Tinggi!**")
         else:
-            st.write("**Risiko Dropout Rendah!**")
+            st.write("### **Risiko Dropout Rendah!**")
 
     except Exception as e:
         st.error(f"Terjadi kesalahan sistem: {e}")
