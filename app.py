@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 import time
 from joblib import load
 
@@ -322,26 +323,26 @@ prev_qual_grade = st.number_input("Previous qualification (grade)", min_value=0.
 admission_grade = st.number_input("Admission grade", min_value=0.00, max_value=200.00, value=100.00)
 
 ### 8. Sem 1 Information
-curr_units_1_credited = st.number_input("Curricular units 1st sem (credited)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_enrolled = st.number_input("Curricular units 1st sem (enrolled)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_eval = st.number_input("Curricular units 1st sem (evaluations)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_approved = st.number_input("Curricular units 1st sem (approved)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_grade = st.number_input("Curricular units 1st sem (grade)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_1_without_eval = st.number_input("Curricular units 1st sem (without evaluations)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_1_credited = st.number_input("Curricular units 1st sem (credited)", min_value=0, max_value=100, value=1)
+curr_units_1_enrolled = st.number_input("Curricular units 1st sem (enrolled)", min_value=0, max_value=100, value=1)
+curr_units_1_eval = st.number_input("Curricular units 1st sem (evaluations)", min_value=0, max_value=100, value=1)
+curr_units_1_approved = st.number_input("Curricular units 1st sem (approved)", min_value=0, max_value=100, value=1)
+curr_units_1_grade = st.number_input("Curricular units 1st sem (grade)", min_value=0, max_value=20, value=10)
+curr_units_1_without_eval = st.number_input("Curricular units 1st sem (without evaluations)", min_value=0, max_value=100, value=1)
 
 ### 9. Sem 2 Information
-curr_units_2_credited = st.number_input("Curricular units 2nd sem (credited)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_enrolled = st.number_input("Curricular units 2nd sem (enrolled)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_eval = st.number_input("Curricular units 2nd sem (evaluations)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_approved = st.number_input("Curricular units 2nd sem (approved)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_grade = st.number_input("Curricular units 2nd sem (grade)", min_value=0.1, max_value=1000.0, value=300.0)
-curr_units_2_without_eval = st.number_input("Curricular units 2nd sem (without evaluations)", min_value=0.1, max_value=1000.0, value=300.0)
+curr_units_2_credited = st.number_input("Curricular units 2nd sem (credited)", min_value=0, max_value=100, value=1)
+curr_units_2_enrolled = st.number_input("Curricular units 2nd sem (enrolled)", min_value=0, max_value=100, value=1)
+curr_units_2_eval = st.number_input("Curricular units 2nd sem (evaluations)", min_value=0, max_value=100, value=1)
+curr_units_2_approved = st.number_input("Curricular units 2nd sem (approved)", min_value=0, max_value=100, value=1)
+curr_units_2_grade = st.number_input("Curricular units 2nd sem (grade)", min_value=0, max_value=20, value=10)
+curr_units_2_without_eval = st.number_input("Curricular units 2nd sem (without evaluations)", min_value=0, max_value=100, value=1)
 
 ## Input Economic Information
 ### Macro Economic Indicators
-unemployement_rate = st.number_input("Unemployment rate", min_value=0.1, max_value=1000.0, value=400.0)
-inflation_rate = st.number_input("Inflation rate", min_value=0.1, max_value=1000.0, value=15.0)
-gdp = st.number_input("GDP", min_value=0.1, max_value=1000.0, value=80.0)
+unemployement_rate = st.number_input("Unemployment rate", min_value=0.0, max_value=100.0, value=0.0)
+inflation_rate = st.number_input("Inflation rate", min_value=0.0, max_value=100.0, value=1.0)
+gdp = st.number_input("GDP", min_value=0.0, max_value=1_000_000.0, value=10_000.0)
 
 ### Financial Information
 debtor = st.selectbox(
