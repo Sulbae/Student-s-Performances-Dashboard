@@ -99,29 +99,28 @@ Dashboard berisi informasi mengenai ringkasan metrik-metrik penting dan visualis
 ## Conclusion
 
 Berdasarkan hasil analisis dalam proyek ini, maka dapat disimpulkan bahwa:
-1. Kompensasi Finansial merupakan Faktor Pendorong Utama Attrition
-    * Karyawan dengan rasio kompensasi terhadap biaya hidup yang tidak seimbang (terutama yang menempuh jarak jauh dengan gaji yang relatif pas-pasan) memiliki kecenderungan lebih tinggi untuk resign. Dengan demikian, daya saing kompensasi dan pertimbangan biaya transportasi merupakan elemen kritis dalam keputusan retensi karyawan.
-2. Masa Kerja dan Stabilitas Karir memiliki pengaruh yang signifikan terhadap Attrition Rate
-    * Analisis terhadap NumCompaniesWorked, TotalWorkingYears, dan YearsAtCompany menunjukkan bahwa:
-        - Karyawan dengan masa kerja kurang dari atau sama dengan 1 tahun merupakan segmen paling rentan terhadap Attrition (early-stage churn).
-        - Karyawan dengan pengalaman kerja < 10 tahun dan riwayat perpindahan perusahaan yang cukup sering menunjukkan pola mobilitas karir yang cukup tinggi.
-        - Sebaliknya, karyawan senior (masa kerja > 10 tahun atau dengan level jabatan yang tinggi) menunjukkan tingkat retensi yang lebih stabil.
-3. Faktor Psikologis dan Lingkungan Kerja sebagai Pendorong Sekunder
-    * Dapat dikatakan passion (JobInvolvement), lingkungan kerja (EnvironmentSatisfaction), dan kenyamanan dalam pekerjaan mereka (JobSatisfaction) memiliki korelasi moderat, tetapi konsisten terhadap attrition. Meskipun pengaruhnya tidak sekuat faktor-faktor lain. Aspek ini dapat menjadi faktor penguat yang akan mempercepat atau memperlambat keputusan resign, terutama ketika dikombinasikan dengan faktor ketidakpuasan terhadap kompensasi/benefit finansial.
-4. Top 10 faktor yang berpengaruh signifikan terhadap Attration Rate
-    * Berdasarkan hubungan pengaruh antar variabel yang telah dikalkulasi menggunakan metode perhitungan korelasi matrix. Aspek-aspek seperti DistanceFromHome, NumCompaniesWorked, MonthlyRate, PerformanceRating, dan PercentSalaryHike memiliki korelasi positif yang paling signifikan terhadap Attrition Karyawan dibandingkan dengan aspek-aspek lainnya. 
-    * Menarik sekali bahwa PerfomanceRating memiliki korelasi positif terhadap Attrition. Beberapa alasan yang mungkin menjadi faktor penyebabnya antara lain:
-        - Talent dengan performa tinggi seringkali memiliki nilai pasar (value) yang lebih kompetitif sehingga lebih mudah mendapat tawaran dari perusahaan lain.
-        - Talent dengan performa tinggi memiliki ekspektasi promosi lebih cepat atau kenaikan gaji/kompensasi yang lebih tinggi. Jika ekspektasi tersebut tidak tercapai, maka dapat menjadi motivasi yang cukup kuat untuk pindah.
-    * Sementara itu, aspek MonthlyIncome, StockOptionLevel, JobLevel, Age, TotalWorkingYears memiliki korelasi negatif yang paling signifikan terhadap Attrition Karyawan dibandingkan dengan aspek-aspek lainnya. Aspek Total Working Years dan Age biasanya saling berkaitan karena pada umumnya karyawan-karyawan yang sudah sangat senior memiliki peluang yang lebih rendah untuk berhenti/diberhentikan dari pekerjaannya karena berbagai alasan, misalnya sudah memiliki tanggungjawab yang besar atau sudah merasa nyaman dalam pekerjaannya. Hal ini sejalan dengan korelasi negatif yang ditunjukkan oleh aspek JobLevel, yang mana menandakan bahwa karyawan dengan level posisi yang lebih junior/rendah memiliki potensi Attrition yang lebih tinggi.
+1. Faktor-faktor yang berpengaruh signifikan terhadap kejadian Dropout
+    * Berdasarkan hubungan pengaruh antar variabel yang telah dikalkulasi menggunakan metode perhitungan korelasi matrix, maka dapat diketahui bahwa kejadian Dropout yang dialami mahasiswa selama ini banyak disebabkan akibat lebih dari satu aspek antara lain:
+        - Aspek Capaian Akademik
+        - Aspek Finansial
+        - Aspek Sosial & Psikologis
 
-### Rekomendasi Action Items (Optional)
+2. Aspek Capaian Akademik sebagai faktor utama 
+    * Mahasiswa dengan capaian akademik yang buruk memiliki tingkat risiko Dropout yang lebih tinggi bila dibandingkan dengan mahasiswa yang memiliki capaian akademik bagus. Capaian yang buruk tersebut dapat dipengaruhi oleh beberapa hal seperti kurangnya motivasi belajar maupun kondisi personal mahasiswa yang kurang memadai. Meskipun begitu, dalam beberapa kasus diketahui bahwa ada juga mahasiswa yang capaian akademiknya sudah bagus, tetapi masih mengalami Dropout. Hal ini menandakan ada faktor lain juga yang memengaruhi kecenderungan Dropout.
+3. Aspek non-Akademik sebagai faktor tambahan
+    * Selain aspek capaian akademik, kejadian Dropout juga dapat disebabkan oleh aspek non-Akademik seperti:
+        - Keterbatasan Finansial Mahasiswa: Terdapat sampel yang menunjukkan bahwa mayoritas mahasiswa yang mengalami Dropout berasal dari kelompok mahasiswa yang memiliki masalah finansial yang ditandai dengan pengambilan pinjaman/utang maupun pembayaran yang tidak tepat waktu. Kelompok seperti ini juga memiliki tingkat risiko Dropout yang cukup tinggi. Hal ini diperkuat dengan data yang menunjukkan bahwa tingkat risiko Dropout pada para penerima beasiswa sangatlah kecil. 
+        - Kondisi Makro Ekonomi: Meskipun pengaruhnya terhadap Dropout tidak sekuat masalah finansial secara personal (tidak berpengaruh secara langsung terhadap kejadian Dropout), kondisi makro ekonomi seperti besaran GDP, tingkat inflasi, dan tingkat pengangguran mampu mendorong psikologi mahasiswa dalam memperjuangkan studinya. Ketika indikator-indikator ekonomi tersebut terlihat sedang tidak baik, sebagian mahasiswa justru termotivasi untuk bisa secepatnya menyelesaikan studi sehingga mereka dapat segera fokus mencari pekerjaan dan memiliki penghasilan yang stabil sehingga bisa memenuhi kebutuhan finansial mereka yang semakin tertekan akibat kondisi ekonomi makro yang buruk.
+
+
+### Rekomendasi Action Items
 
 Berdasarkan temuan-temuan tersebut, berikut adalah rekomendasi strategis yang potensial untuk diterapkan:
 
 1. Penerapan Early Support System
-    - Apabila mahasiswa terindikasi sebagai Debtor dan/atau tercatat pernah telat melakukan pembayaran, segera lakukan intervensi dini seperti menyediakan layanan konseling untuk meminimalisir risiko Dropout akibat masalah finansial yang dihadapi.
+    - Kampus harus lebih jeli dalam mengamati dan menganalisis hasil studi atau capaian akademik mahasiswa mulai dari periode awal (saat masuk maupun semester awal). Ketika menemukan mahasiswa dengan nilai yang minimum, maka dapat segera ambil tindakan untuk melakukan bimbingan khusus kepada mereka sebagai langkah mitigasi dalam menekan angka Dropout mahasiswa.
         
 2. Program Bantuan Finansial
-    - * Pemberian keringanan khusus seperti skema pembayaran cicilan.
+    - Apabila mahasiswa terindikasi sebagai Debtor dan/atau tercatat pernah telat melakukan pembayaran, segera lakukan intervensi dini seperti menyediakan layanan konseling untuk membantu mengelola risiko Dropout akibat masalah finansial yang dihadapi.
+    - Pemberian keringanan khusus seperti skema pembayaran cicilan dengan syarat juga diharapkan mampu memberikan sedikit kelonggaran terhadap mahasiswa dalam memenuhi biaya pendidikan mereka disaat kondisi finansial mereka sedang tidak baik.
 
