@@ -72,6 +72,7 @@ Model Training & Evaluation
 Model Inference
 |---Streamlit
 ```
+[Coba Dropout Risk Assessment App](https://dropout-risk-assessment.streamlit.app/)
 
 ## Business Dashboard
 
