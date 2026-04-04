@@ -136,11 +136,17 @@ E. Finansial Information
 
 F. Added Information
 1) Displaced Chart
-    - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 golongan yaitu mahasiswa yang memiliki kebutuhan khusus dan tidak. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.  
+    - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 kelompok yaitu mahasiswa yang perlu kos/rumah sewa dan yang tidak. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.  
 2) International Chart
-    - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 golongan yaitu mahasiswa yang memiliki kebutuhan khusus dan tidak. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.
+    - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 kelompok yaitu mahasiswa Internasional dan non-Internasional. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.
 3) Educational special needs Chart
     - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 golongan yaitu mahasiswa yang memiliki kebutuhan khusus dan tidak. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.
+4) Age at enrollment Chart
+    - Memberikan informasi mengenai distribusi usia mahasiswa saat pendaftaran sesuai kelompok statusnya. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.  
+5) Admission Grade Chart
+    - Memberikan informasi mengenai distribusi Admission Grade mahasiswa sesuai kelompok statusnya. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.
+6) Gender Chart
+    - Memberikan informasi mengenai distribusi gender mahasiswa sesuai kelompok statusnya. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.
 
 ## Conclusion
 
