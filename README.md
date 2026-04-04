@@ -82,72 +82,65 @@ Dashboard berisi informasi mengenai ringkasan metrik-metrik penting dan visualis
 
 A. Overview
 1) Total Mahasiswa
-    - Deskripsi: Jumlah seluruh mahasiswa yang terdata.
-    - Kegunaan: Memberikan informasi mengenai besaran jumlah mahasiswa baik yang masih aktif maupun yang sudah lulus/dropout.
+    - Memberikan informasi mengenai besaran jumlah mahasiswa baik yang masih aktif maupun yang sudah lulus/dropout.
 2) Dropout
-    - Deskripsi: Jumlah karyawan yang telah berhenti/diberhentikan dan tercatat pada database.
-    - Kegunaan: Menjadi indikator tinggi-rendahnya tingkat pergantian karyawan (Attrition Rate).
+    - Memberikan informasi jumlah total mahasiswa yang dropout sesuai dengan filter yang digunakan.  
 3) Active
-    - Deskripsi: Usia rata-rata karyawan secara keseluruhan.
-    - Kegunaan: Usia rata-rata dapat menjadi indikator dalam analisis demografi personel tim khususnya dalam monitoring komposisi tim hingga perencanaan promosi dan/atau suksesi.
+    - Memberikan informasi jumlah total mahasiswa yang masih aktif (enrolled) sesuai dengan filter yang digunakan.   
 4) Graduate
-    - Deskripsi: Tingkat kepuasan rata-rata karyawan terhadap kondisi lingkungan/budaya kerja perusahaan (Environment Satisfaction).
-    - Kegunaan: Menjadi indikator awal dalam mengetahui tingkat kenyamanan perusahaan secara umum bagi seluruh karyawan.
+    - Memberikan informasi jumlah total mahasiswa yang sudah lulus berdasarkan filter yang digunakan.
 
 B. Macro Economy
 1) GDP
-    - Deskripsi: Tingkat kepuasan rata-rata karyawan terhadap pekerjaan yang diemban oleh mereka. 
-    - Kegunaan: Menjadi indikator awal dalam mengetahui tingkat kesesuaian ekspektasi kerja karyawan dengan beban kerja nyata di kantor/lapangan. Informasi ini akan berguna sebagai early-warning dalam mendeteksi gejala burnout karyawan maupun pengelolaan organisasi yang tidak efisien.
+    - Memberikan informasi mengenai rata-rata GDP. Data ini digunakan untuk memahami pengaruh aspek Ekonomi Makro terhadap aspek Finansial mahasiswa yang akhirnya berdampak pada kecenderungan Dropout. 
 2) Unemployment Rate
-    - Deskripsi: Tingkat performa/kinerja rata-rata karyawan secara keseluruhan.
-    - Kegunaan: Mengukur kinerja rata-rata karyawan dan sebagai tolak ukur awal yang menggambarkan tingkat produktivitas dari tenaga kerja perusahaan.
+    - Memberikan informasi mengenai rata-rata tingkat pengangguran. Data ini digunakan untuk memahami pengaruh aspek Ekonomi Makro terhadap aspek Finansial mahasiswa yang akhirnya berdampak pada kecenderungan Dropout. 
 3) Inflation Rate
-    - Deskripsi: Jumlah pelatihan rata-rata yang telah diikuti karyawan selama satu tahun terakhir.
-    - Kegunaan: Menjadi indikator pembanding bagi metrik Performance Rate dalam mengukur tingkat produktivitas perusahaan. Jumlah pelatihan dapat menjadi nilai representatif dari besaran investasi yang telah perusahaan lakukan untuk memelihara kualitas talentanya, yakni melalui pemberian fasilitas kegiatan pelatihan bagi para karyawan.
+    - Memberikan informasi mengenai rata-rata tingkat inflasi. Data ini digunakan untuk memahami pengaruh aspek Ekonomi Makro terhadap aspek Finansial mahasiswa yang akhirnya berdampak pada kecenderungan Dropout. 
 
 C. Curricular Unit 1st Sem
-1) Monthly Rate Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Rate yang telah dikelompokkan ke dalam level tertentu.
-    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level gaji bulanan. Data ini digunakan untuk memahami pengaruh besaran gaji yang diterima terhadap tingkat Attrition karyawan.  
-2) Percent Salary Hike Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan besaran Percent Salary Hike dalam satu tahun terakhir.
-    - Kegunaan: Memberikan informasi besaran persentase kenaikan gaji bulanan dibandingkan dengan gaji sebelumnya. Data ini digunakan untuk memahami pengaruh besaran persentase kenaikan gaji terhadap tingkat Attrition karyawan.
-3) Monthly Income Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Income yang telah dikelompokkan ke dalam level tertentu.
-    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level pendapatan total (gaji + pendapatan lain-lain) bulanan. Data ini digunakan untuk memahami pengaruh besaran pendapatan total bulanan yang mampu diperoleh terhadap tingkat Attrition karyawan.
+1) Credited
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang dikreditkan atau dikonversi/ditransfer pada semester 1. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 1 terhadap kecenderungan Dropout.  
+2) Enrolled
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang didaftarkan atau diambil pada semester 1. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 1 terhadap kecenderungan Dropout.
+3) Evaluations
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang diuji atau dinilai pada semester 1. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 1 terhadap kecenderungan Dropout.
+4) Approved
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang lulus atau berhasil dinilai pada semester 1. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 1 terhadap kecenderungan Dropout.
+5) Grade
+    - Memberikan informasi mengenai nilai akhir atau IPK pada semester 1. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 1 terhadap kecenderungan Dropout. 
+6) Without Evaluations
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang belum diuji atau dinilai pada semester 1. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 1 terhadap kecenderungan Dropout. 
 
 D. Curricular Unit 2nd Sem
-1) Monthly Rate Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Rate yang telah dikelompokkan ke dalam level tertentu.
-    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level gaji bulanan. Data ini digunakan untuk memahami pengaruh besaran gaji yang diterima terhadap tingkat Attrition karyawan.  
-2) Percent Salary Hike Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan besaran Percent Salary Hike dalam satu tahun terakhir.
-    - Kegunaan: Memberikan informasi besaran persentase kenaikan gaji bulanan dibandingkan dengan gaji sebelumnya. Data ini digunakan untuk memahami pengaruh besaran persentase kenaikan gaji terhadap tingkat Attrition karyawan.
-3) Monthly Income Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Income yang telah dikelompokkan ke dalam level tertentu.
-    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level pendapatan total (gaji + pendapatan lain-lain) bulanan. Data ini digunakan untuk memahami pengaruh besaran pendapatan total bulanan yang mampu diperoleh terhadap tingkat Attrition karyawan.
+1) Credited
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang dikreditkan atau dikonversi/ditransfer pada semester 2. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 2 terhadap kecenderungan Dropout.    
+2) Enrolled
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang didaftarkan atau diambil pada semester 2. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 2 terhadap kecenderungan Dropout. 
+3) Evaluations
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang diuji atau dinilai pada semester 2. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 2 terhadap kecenderungan Dropout.
+4) Approved
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang lulus atau berhasil dinilai pada semester 2. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 2 terhadap kecenderungan Dropout. 
+5) Grade
+    - Memberikan informasi mengenai nilai akhir atau IPK pada semester 2. Data ini digunakan untuk memahami pengaruh aspek Capaian Akademik di semester 2 terhadap kecenderungan Dropout. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 2 terhadap kecenderungan Dropout.
+6) Without Evaluations
+    - Memberikan informasi mengenai jumlah SKS mata kuliah yang belum diuji atau dinilai pada semester 2. Data ini digunakan untuk memahami seberapa besar pengaruh aspek Capaian Akademik di semester 2 terhadap kecenderungan Dropout.
 
 E. Finansial Information
-1) Monthly Rate Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Rate yang telah dikelompokkan ke dalam level tertentu.
-    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level gaji bulanan. Data ini digunakan untuk memahami pengaruh besaran gaji yang diterima terhadap tingkat Attrition karyawan.  
-2) Percent Salary Hike Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan besaran Percent Salary Hike dalam satu tahun terakhir.
-    - Kegunaan: Memberikan informasi besaran persentase kenaikan gaji bulanan dibandingkan dengan gaji sebelumnya. Data ini digunakan untuk memahami pengaruh besaran persentase kenaikan gaji terhadap tingkat Attrition karyawan.
-3) Monthly Income Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Income yang telah dikelompokkan ke dalam level tertentu.
-    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level pendapatan total (gaji + pendapatan lain-lain) bulanan. Data ini digunakan untuk memahami pengaruh besaran pendapatan total bulanan yang mampu diperoleh terhadap tingkat Attrition karyawan.
+1) Debtor Chart
+    - Memberikan informasi mengenai distribusi jumlah mahasiswa yang mengambil pinjaman sesuai kelompok statusnya baik yang dropout, sudah lulus, maupun masih aktif. Data ini digunakan untuk memahami pengaruh aspek Finansial terhadap kecenderungan Dropout.    
+2) Tuition fees up to date Chart
+    - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 golongan yaitu mahasiswa yang memiliki memiliki riwayat telat bayar tagihan semester dan tidak. Data ini digunakan untuk memahami pengaruh aspek Finansial terhadap kecenderungan Dropout.  
+3) Scholarship holder Chart
+    - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 golongan yaitu mahasiswa yang menerima beasiswa dan tidak. Data ini digunakan untuk memahami pengaruh aspek Finansial terhadap kecenderungan Dropout.  
 
 F. Added Information
-1) Monthly Rate Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Rate yang telah dikelompokkan ke dalam level tertentu.
-    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level gaji bulanan. Data ini digunakan untuk memahami pengaruh besaran gaji yang diterima terhadap tingkat Attrition karyawan.  
-2) Percent Salary Hike Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan besaran Percent Salary Hike dalam satu tahun terakhir.
-    - Kegunaan: Memberikan informasi besaran persentase kenaikan gaji bulanan dibandingkan dengan gaji sebelumnya. Data ini digunakan untuk memahami pengaruh besaran persentase kenaikan gaji terhadap tingkat Attrition karyawan.
-3) Monthly Income Chart
-    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Income yang telah dikelompokkan ke dalam level tertentu.
-    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level pendapatan total (gaji + pendapatan lain-lain) bulanan. Data ini digunakan untuk memahami pengaruh besaran pendapatan total bulanan yang mampu diperoleh terhadap tingkat Attrition karyawan.
+1) Displaced Chart
+    - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 golongan yaitu mahasiswa yang memiliki kebutuhan khusus dan tidak. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.  
+2) International Chart
+    - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 golongan yaitu mahasiswa yang memiliki kebutuhan khusus dan tidak. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.
+3) Educational special needs Chart
+    - Memberikan informasi mengenai distribusi jumlah mahasiswa sesuai kelompok statusnya yang terbagi dalam 2 golongan yaitu mahasiswa yang memiliki kebutuhan khusus dan tidak. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.
 
 ## Conclusion
 
