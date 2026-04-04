@@ -55,6 +55,7 @@ Data Cleaning
 Data Preprocessing
 |---Data Filtering
 |---Feature Engineering
+|---Data Split
 |---Data Encoding
 ```
 Eksplorasi dan Analisis Data
@@ -63,40 +64,87 @@ Analisis Korelasi Antar Variabel Data
 |---Observasi pengaruh Aspek Capaian Akademik terhadap kejadian Dropout
 |---Observasi pengaruh Aspek non-Akademik terhadap kejadian Dropout
 ```
+Model Development & Deployment
+```
+Model Training & Evaluation
+|---RandomForestClassifier
+|---Confusion Matrix
+Model Inference
+|---Streamlit
+```
 
 ## Business Dashboard
 
-[Lihat Dashboard]()
+[Lihat Dashboard](https://lookerstudio.google.com/reporting/be1b741c-4a07-4e2f-a0d9-677d8a283da6)
 
-Dashboard berisi informasi mengenai ringkasan metrik-metrik penting dan visualisasi data yang diperlukan dalam kegiatan monitoring terhadap berbagai aspek yang berkaitan dengan kondisi pengelolaan sumber daya manusia (talent) perusahaan seperti berikut:
-1) Total Karyawan
-    - Deskripsi: Jumlah seluruh karyawan yang terdata.
-    - Kegunaan: Memberikan informasi mengenai besaran jumlah karyawan yang sedang/telah dikelola perusahaan.
-2) Total Attrition
+Dashboard berisi informasi mengenai ringkasan metrik-metrik penting dan visualisasi data yang diperlukan dalam kegiatan monitoring data mahasiswa seperti berikut:
+
+A. Overview
+1) Total Mahasiswa
+    - Deskripsi: Jumlah seluruh mahasiswa yang terdata.
+    - Kegunaan: Memberikan informasi mengenai besaran jumlah mahasiswa baik yang masih aktif maupun yang sudah lulus/dropout.
+2) Dropout
     - Deskripsi: Jumlah karyawan yang telah berhenti/diberhentikan dan tercatat pada database.
     - Kegunaan: Menjadi indikator tinggi-rendahnya tingkat pergantian karyawan (Attrition Rate).
-3) Rata-rata Usia (Avg. Age)
+3) Active
     - Deskripsi: Usia rata-rata karyawan secara keseluruhan.
     - Kegunaan: Usia rata-rata dapat menjadi indikator dalam analisis demografi personel tim khususnya dalam monitoring komposisi tim hingga perencanaan promosi dan/atau suksesi.
-4) Enviro Satisfaction Rate
+4) Graduate
     - Deskripsi: Tingkat kepuasan rata-rata karyawan terhadap kondisi lingkungan/budaya kerja perusahaan (Environment Satisfaction).
     - Kegunaan: Menjadi indikator awal dalam mengetahui tingkat kenyamanan perusahaan secara umum bagi seluruh karyawan.
-5) Job Satisfaction Rate
+
+B. Macro Economy
+1) GDP
     - Deskripsi: Tingkat kepuasan rata-rata karyawan terhadap pekerjaan yang diemban oleh mereka. 
     - Kegunaan: Menjadi indikator awal dalam mengetahui tingkat kesesuaian ekspektasi kerja karyawan dengan beban kerja nyata di kantor/lapangan. Informasi ini akan berguna sebagai early-warning dalam mendeteksi gejala burnout karyawan maupun pengelolaan organisasi yang tidak efisien.
-6) Perfomance Rate
+2) Unemployment Rate
     - Deskripsi: Tingkat performa/kinerja rata-rata karyawan secara keseluruhan.
     - Kegunaan: Mengukur kinerja rata-rata karyawan dan sebagai tolak ukur awal yang menggambarkan tingkat produktivitas dari tenaga kerja perusahaan.
-7) Rata-rata Pelatihan Yang Diikuti (Avg. Training (Last Year))
+3) Inflation Rate
     - Deskripsi: Jumlah pelatihan rata-rata yang telah diikuti karyawan selama satu tahun terakhir.
     - Kegunaan: Menjadi indikator pembanding bagi metrik Performance Rate dalam mengukur tingkat produktivitas perusahaan. Jumlah pelatihan dapat menjadi nilai representatif dari besaran investasi yang telah perusahaan lakukan untuk memelihara kualitas talentanya, yakni melalui pemberian fasilitas kegiatan pelatihan bagi para karyawan.
-8) Monthly Rate Chart
+
+C. Curricular Unit 1st Sem
+1) Monthly Rate Chart
     - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Rate yang telah dikelompokkan ke dalam level tertentu.
     - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level gaji bulanan. Data ini digunakan untuk memahami pengaruh besaran gaji yang diterima terhadap tingkat Attrition karyawan.  
-9) Percent Salary Hike Chart
+2) Percent Salary Hike Chart
     - Deskripsi: Menampilkan jumlah Attrition berdasarkan besaran Percent Salary Hike dalam satu tahun terakhir.
     - Kegunaan: Memberikan informasi besaran persentase kenaikan gaji bulanan dibandingkan dengan gaji sebelumnya. Data ini digunakan untuk memahami pengaruh besaran persentase kenaikan gaji terhadap tingkat Attrition karyawan.
-10) Monthly Income Chart
+3) Monthly Income Chart
+    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Income yang telah dikelompokkan ke dalam level tertentu.
+    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level pendapatan total (gaji + pendapatan lain-lain) bulanan. Data ini digunakan untuk memahami pengaruh besaran pendapatan total bulanan yang mampu diperoleh terhadap tingkat Attrition karyawan.
+
+D. Curricular Unit 2nd Sem
+1) Monthly Rate Chart
+    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Rate yang telah dikelompokkan ke dalam level tertentu.
+    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level gaji bulanan. Data ini digunakan untuk memahami pengaruh besaran gaji yang diterima terhadap tingkat Attrition karyawan.  
+2) Percent Salary Hike Chart
+    - Deskripsi: Menampilkan jumlah Attrition berdasarkan besaran Percent Salary Hike dalam satu tahun terakhir.
+    - Kegunaan: Memberikan informasi besaran persentase kenaikan gaji bulanan dibandingkan dengan gaji sebelumnya. Data ini digunakan untuk memahami pengaruh besaran persentase kenaikan gaji terhadap tingkat Attrition karyawan.
+3) Monthly Income Chart
+    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Income yang telah dikelompokkan ke dalam level tertentu.
+    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level pendapatan total (gaji + pendapatan lain-lain) bulanan. Data ini digunakan untuk memahami pengaruh besaran pendapatan total bulanan yang mampu diperoleh terhadap tingkat Attrition karyawan.
+
+E. Finansial Information
+1) Monthly Rate Chart
+    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Rate yang telah dikelompokkan ke dalam level tertentu.
+    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level gaji bulanan. Data ini digunakan untuk memahami pengaruh besaran gaji yang diterima terhadap tingkat Attrition karyawan.  
+2) Percent Salary Hike Chart
+    - Deskripsi: Menampilkan jumlah Attrition berdasarkan besaran Percent Salary Hike dalam satu tahun terakhir.
+    - Kegunaan: Memberikan informasi besaran persentase kenaikan gaji bulanan dibandingkan dengan gaji sebelumnya. Data ini digunakan untuk memahami pengaruh besaran persentase kenaikan gaji terhadap tingkat Attrition karyawan.
+3) Monthly Income Chart
+    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Income yang telah dikelompokkan ke dalam level tertentu.
+    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level pendapatan total (gaji + pendapatan lain-lain) bulanan. Data ini digunakan untuk memahami pengaruh besaran pendapatan total bulanan yang mampu diperoleh terhadap tingkat Attrition karyawan.
+
+F. Added Information
+1) Monthly Rate Chart
+    - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Rate yang telah dikelompokkan ke dalam level tertentu.
+    - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level gaji bulanan. Data ini digunakan untuk memahami pengaruh besaran gaji yang diterima terhadap tingkat Attrition karyawan.  
+2) Percent Salary Hike Chart
+    - Deskripsi: Menampilkan jumlah Attrition berdasarkan besaran Percent Salary Hike dalam satu tahun terakhir.
+    - Kegunaan: Memberikan informasi besaran persentase kenaikan gaji bulanan dibandingkan dengan gaji sebelumnya. Data ini digunakan untuk memahami pengaruh besaran persentase kenaikan gaji terhadap tingkat Attrition karyawan.
+3) Monthly Income Chart
     - Deskripsi: Menampilkan jumlah Attrition berdasarkan Monthly Income yang telah dikelompokkan ke dalam level tertentu.
     - Kegunaan: Memberikan informasi mengenai distribusi Attrition karyawan yang tersebar dalam berbagai level pendapatan total (gaji + pendapatan lain-lain) bulanan. Data ini digunakan untuk memahami pengaruh besaran pendapatan total bulanan yang mampu diperoleh terhadap tingkat Attrition karyawan.
 
