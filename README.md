@@ -187,11 +187,13 @@ Berdasarkan hasil dalam proyek ini, maka dapat disimpulkan bahwa:
 
 ### Rekomendasi Action Items
 
-Berdasarkan temuan-temuan tersebut, berikut adalah rekomendasi strategis yang potensial untuk diterapkan:
+Setelah dikembangkannya Dropout Risk Assessment App, kampus dapat melakukan screening awal terhadap mahasiswanya menggunakan data-data mulai dari saat mahasiswa masuk hingga data hasil pembelajaran selama 2 semester pertama. App dapat digunakan untuk melakukan prediksi tingkat risiko dropout. Jika hasil prediksi mengatakan bahwa mahasiswa memiliki risiko dropout yang tinggi, selanjutnya perlu ditinjau lebih lanjut melalui dashboard untuk melihat aspek-aspek apa saja yang menjadi faktor utama yang mendorong mahasiswa tersebut memiliki risiko dropout yang tinggi.
+
+Berikut adalah langkah strategis potensial yang dapat diterapkan Jaya-Jaya Institut:
 
 1. Penerapan Early Support System
-    - Kampus harus lebih jeli dalam mengamati dan menganalisis hasil studi atau capaian akademik mahasiswa mulai dari periode awal (saat masuk maupun semester awal). Ketika menemukan mahasiswa dengan nilai yang minimum, maka dapat segera ambil tindakan untuk melakukan bimbingan khusus kepada mereka sebagai langkah mitigasi dalam menekan angka Dropout mahasiswa.
+    - Kampus harus lebih jeli dalam mengamati dan menganalisis hasil studi atau capaian akademik mahasiswa mulai dari periode awal (saat masuk maupun semester awal). Ketika menemukan mahasiswa memiliki nilai GPA sem 1 di bawah rata-rata (<= 7.26) yang kemudian nilai GPA sem 2 mengalami penurunan hingga <= 5.9, maka dapat segera ambil tindakan untuk melakukan bimbingan khusus kepada mereka seperti memberikan fasilitas mentoring belajar bersama senior yang berprestasi.
         
 2. Program Bantuan Finansial
-    - Apabila mahasiswa terindikasi sebagai Debtor dan/atau tercatat pernah telat melakukan pembayaran, segera lakukan intervensi dini seperti menyediakan layanan konseling untuk membantu mengelola risiko Dropout akibat masalah finansial yang dihadapi.
+    - Apabila mahasiswa terindikasi sebagai Debtor dan/atau tercatat pernah telat melakukan pembayaran (meskipun memiliki nilai akademik yang memadai atau melebihi rata-rata), segera lakukan intervensi dini seperti menyediakan layanan konseling untuk membantu mengelola risiko Dropout akibat masalah finansial yang dihadapi.
     - Pemberian keringanan khusus seperti skema pembayaran cicilan dengan syarat juga diharapkan mampu memberikan sedikit kelonggaran terhadap mahasiswa dalam memenuhi biaya pendidikan mereka disaat kondisi finansial mereka sedang tidak baik.
