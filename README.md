@@ -16,11 +16,10 @@ Sebagai panduan dalam tahapan analisis, berikut beberapa pertanyaan yang dapat d
 ### Cakupan Proyek
 
 Terdapat 2 outcome utama yang akan dikembangkan pada proyek ini yaitu:
-* Dashboard Monitoring
-    - Dashboard berfungsi untuk membantu para stakeholder dalam monitoring data-data mahasiswa secara keseluruhan
-
 * Aplikasi Dropout Risk Assessment
-    - Aplikasi dengan UI sederhana berbasis streamlit yang dapat membantu memprediksi tingkat risiko dropout mahasiswa.  
+    - Aplikasi dengan UI sederhana berbasis streamlit yang dapat membantu memprediksi tingkat risiko dropout mahasiswa sejak dini.  
+* Dashboard Monitoring
+    - Dashboard berfungsi untuk membantu para stakeholder dalam meninjau data-data mahasiswa secara keseluruhan dan lebih mendalam sehingga dapat membuat keputusan secara tepat.
 
 Secara umum tahapan dalam proyek ini terbagi menjadi beberapa langkah sebagai berikut:
 1) Pengumpulan dan Persiapan Data
