@@ -6,16 +6,25 @@ Jaya Jaya Institut merupakan salah satu institusi pendidikan perguruan tinggi ya
 
 ### Permasalahan Bisnis
 
-Berdasarkan kebutuhan bisnis yang sedang dihadapi, maka fokus utama pada proyek ini adalah membuat dashboard sebagai platform monitoring metrik-metrik penting untuk kebutuhan analisis screening siswa yang memerlukan bimbingan khusus sehingga dapat menurunkan peluang mereka terjerumus ke jalan dropout. Institusi juga perlu menyusun strategi yang tepat untuk dapat menjaga kualitas belajar para siswa. 
+Angka dropout yang tidak terkontrol tentunya dapat menyebabkan permasalahan yang cukup serius bagi institusi pendidikan tinggi seperti Jaya-Jaya Institut ini. Reputasi yang sudah baik akan tergerus apabila akreditasi kampus turun kasta akibat jumlah dropout mahasiswa yang terus meningkat. Oleh karena itu, diperlukan langkah antisipasi sejak dini untuk dapat memperkecil risiko dropout.
 
-Berikut pertanyaan bisnis yang diharapkan dapat terjawab melalui proyek ini.
+Berdasarkan kebutuhan bisnis yang sedang dihadapi, maka proyek ini dilaksanakan untuk mengembangkan sebuah tool (alat bantu) yang mampu membantu proses screening awal para mahasiswa siswa yang memiliki risiko dropout berdasarkan kriteria yang telah ditentukan. Kriteria tersebut ditentukan berdasarkan hasil analisis variabel-variabel yang paling berpengaruh terhadap dropout mahasiswa di masa lalu (yang telah terjadi).
+
+Sebagai panduan dalam tahapan analisis, berikut beberapa pertanyaan yang dapat dijadikan acuan:
 * Apa saja faktor-faktor yang berpengaruh signifikan terhadap tingginya probabilitas mahasiswa dapat mengalami dropout?
 * Bagaimana pengaruh Capaian Akademik Mahasiswa terhadap kecenderungan Dropout?
 * Bagaimana pengaruh faktor Non-Akademik mahasiswa terhadap kecenderungan Dropout? 
-* Bagaimana strategi yang harus dijalankan oleh kampus untuk menekan angka dropout mahasiswa?
 
 ### Cakupan Proyek
 
+Terdapat 2 outcome utama yang akan dikembangkan pada proyek ini yaitu:
+* Dashboard Monitoring
+    - Dashboard berfungsi untuk membantu para stakeholder dalam monitoring data-data mahasiswa secara keseluruhan
+
+* Aplikasi Dropout Risk Assessment
+    - Aplikasi dengan UI sederhana berbasis streamlit yang dapat membantu memprediksi tingkat risiko dropout mahasiswa.  
+
+Secara umum tahapan dalam proyek ini terbagi menjadi beberapa langkah sebagai berikut:
 1) Pengumpulan dan Persiapan Data
 2) Pengolahan dan Analisis Data
 3) Visualisasi dan Interpretasi Data
@@ -72,9 +81,10 @@ Model Training & Evaluation
 Model Inference
 |---Streamlit
 ```
-[Coba Dropout Risk Assessment App](https://dropout-risk-assessment.streamlit.app/)
 
 ## Business Dashboard
+
+![Dashboard-Preview]()
 
 [Lihat Dashboard](https://lookerstudio.google.com/reporting/be1b741c-4a07-4e2f-a0d9-677d8a283da6)
 
@@ -147,6 +157,12 @@ F. Added Information
     - Memberikan informasi mengenai distribusi Admission Grade mahasiswa sesuai kelompok statusnya. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.
 6) Gender Chart
     - Memberikan informasi mengenai distribusi gender mahasiswa sesuai kelompok statusnya. Data ini digunakan untuk memahami pengaruh aspek non-Akademik lainnya terhadap kecenderungan Dropout.
+
+## Menjalankan Sistem Machine Learning
+
+Dropout Risk App yang telah dikembangkan dapat digunakan dengan cara memberikan input data-data mahasiswa yang ingin diperiksa melalui form yang tersedia. Setelah itu, tekan tombol **Prediksi** dan sistem akan melakukan assessment terhadap data-data yang telah diberikan dan akan menghasilkan hasil penilaian tingkat risiko dropout dari mahasiswa tersebut.  
+
+[Coba Dropout Risk Assessment App](https://dropout-risk-assessment.streamlit.app/)
 
 ## Conclusion
 
