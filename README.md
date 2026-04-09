@@ -194,3 +194,5 @@ Berikut adalah langkah strategis potensial yang dapat diterapkan Jaya-Jaya Insti
 2. Program Bantuan Finansial
     - Apabila mahasiswa terindikasi sebagai Debtor dan/atau tercatat pernah telat melakukan pembayaran lebih dari 2 kali (meskipun memiliki nilai akademik yang memadai atau melebihi rata-rata), segera lakukan intervensi dini seperti menyediakan layanan konseling untuk membantu mengelola risiko Dropout akibat masalah finansial yang dihadapi.
     - Pemberian keringanan khusus seperti skema pembayaran cicilan dengan syarat juga diharapkan mampu memberikan sedikit kelonggaran terhadap mahasiswa dalam memenuhi biaya pendidikan mereka disaat kondisi finansial mereka sedang tidak baik.
+
+Apabila diketahui risiko dropout disebabkan oleh faktor akademik saja, maka kampus dapat mengimplementasi strategi pertama. Namun, bila risiko dropout didorong oleh faktor finansial, maka kampus dapat melakukan strategi kedua. Lalu, jika risiko dropout tinggi dipengaruhi oleh faktor akademik dan finansial yang buruk, maka kampus harus mengambil tindakan pertama dan kedua sekaligus untuk mahasiswa tersebut. 
