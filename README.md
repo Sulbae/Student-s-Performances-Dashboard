@@ -84,7 +84,7 @@ Model Inference
 
 ## Business Dashboard
 
-![Dashboard-Preview](<img width="772" height="311" alt="dashboard-preview" src="https://github.com/user-attachments/assets/afe388a1-1669-468e-9624-3fc7087c8231" />
+![Dashboard-Preview](https://github.com/user-attachments/assets/afe388a1-1669-468e-9624-3fc7087c8231>
 )
 
 [Lihat Dashboard](https://lookerstudio.google.com/reporting/be1b741c-4a07-4e2f-a0d9-677d8a283da6)
