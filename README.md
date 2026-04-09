@@ -6,9 +6,7 @@ Jaya Jaya Institut merupakan salah satu institusi pendidikan perguruan tinggi ya
 
 ### Permasalahan Bisnis
 
-Angka dropout yang tidak terkontrol tentunya dapat menyebabkan permasalahan yang cukup serius bagi institusi pendidikan tinggi seperti Jaya-Jaya Institut ini. Reputasi yang sudah baik akan tergerus apabila akreditasi kampus turun kasta akibat jumlah dropout mahasiswa yang terus meningkat. Oleh karena itu, diperlukan langkah antisipasi sejak dini untuk dapat memperkecil risiko dropout.
-
-Berdasarkan kebutuhan bisnis yang sedang dihadapi, maka proyek ini dilaksanakan untuk mengembangkan sebuah tool (alat bantu) yang mampu membantu proses screening awal para mahasiswa siswa yang memiliki risiko dropout berdasarkan kriteria yang telah ditentukan. Kriteria tersebut ditentukan berdasarkan hasil analisis variabel-variabel yang paling berpengaruh terhadap dropout mahasiswa di masa lalu (yang telah terjadi).
+Angka dropout yang tidak terkontrol tentunya dapat menyebabkan permasalahan yang cukup serius bagi institusi pendidikan tinggi seperti Jaya-Jaya Institut ini. Reputasi yang sudah baik akan tergerus apabila akreditasi kampus turun kasta akibat jumlah dropout mahasiswa yang terus meningkat. Oleh karena itu, diperlukan langkah antisipasi sejak dini untuk dapat memperkecil risiko dropout. Sebagai tindak lanjut akan hal itu, maka proyek ini dilaksanakan untuk mengembangkan sebuah tool (alat bantu) yang mampu membantu proses screening awal para mahasiswa yang memiliki risiko dropout berdasarkan kriteria yang telah ditentukan. Kriteria tersebut ditentukan berdasarkan hasil analisis variabel-variabel yang paling berpengaruh terhadap dropout mahasiswa di masa lalu (yang telah terjadi). Dengan mengetahui tingkat risiko dropout mahasiswa sejak awal, kampus dapat lebih fokus dalam memilih solusi yang terbaik untuk para mahasiswanya.
 
 Sebagai panduan dalam tahapan analisis, berikut beberapa pertanyaan yang dapat dijadikan acuan:
 * Apa saja faktor-faktor yang berpengaruh signifikan terhadap tingginya probabilitas mahasiswa dapat mengalami dropout?
