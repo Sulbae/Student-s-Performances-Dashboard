@@ -166,7 +166,7 @@ Dropout Risk App yang telah dikembangkan dapat digunakan dengan cara memberikan 
 
 ## Conclusion
 
-Berdasarkan hasil analisis dalam proyek ini, maka dapat disimpulkan bahwa:
+Berdasarkan hasil dalam proyek ini, maka dapat disimpulkan bahwa:
 1. Faktor-faktor yang berpengaruh signifikan terhadap kejadian Dropout
     * Berdasarkan hubungan pengaruh antar variabel yang telah dikalkulasi menggunakan metode perhitungan korelasi matrix, maka dapat diketahui bahwa kejadian Dropout yang dialami mahasiswa selama ini banyak disebabkan akibat lebih dari satu aspek antara lain:
         - Aspek Capaian Akademik
@@ -180,6 +180,7 @@ Berdasarkan hasil analisis dalam proyek ini, maka dapat disimpulkan bahwa:
         - Keterbatasan Finansial Mahasiswa: Terdapat sampel yang menunjukkan bahwa mayoritas mahasiswa yang mengalami Dropout berasal dari kelompok mahasiswa yang memiliki masalah finansial yang ditandai dengan pengambilan pinjaman/utang maupun pembayaran yang tidak tepat waktu. Kelompok seperti ini juga memiliki tingkat risiko Dropout yang cukup tinggi. Hal ini diperkuat dengan data yang menunjukkan bahwa tingkat risiko Dropout pada para penerima beasiswa sangatlah kecil. 
         - Kondisi Makro Ekonomi: Meskipun pengaruhnya terhadap Dropout tidak sekuat masalah finansial secara personal (tidak berpengaruh secara langsung terhadap kejadian Dropout), kondisi makro ekonomi seperti besaran GDP, tingkat inflasi, dan tingkat pengangguran mampu mendorong psikologi mahasiswa dalam memperjuangkan studinya. Ketika indikator-indikator ekonomi tersebut terlihat sedang tidak baik, sebagian mahasiswa justru termotivasi untuk bisa secepatnya menyelesaikan studi sehingga mereka dapat segera fokus mencari pekerjaan dan memiliki penghasilan yang stabil sehingga bisa memenuhi kebutuhan finansial mereka yang semakin tertekan akibat kondisi ekonomi makro yang buruk.
         - Aspek-aspek lain: Aspek lain seperti sosial dan psikologis juga turut menjadi faktor yang mampu mendorong motivasi belajar mahasiswa dan akhirnya berdampak terhadap kecenderungan untuk dapat menyelesaikan studi dengan baik atau tidak. Variabel-variabel tersebut diantaranya Usia saat penerimaan, jenis kelamin, kebutuhan sewa tempat tinggal, hingga kebutuhan khusus lainnya untuk keperluan studi. 
+4. Dropout Risk Assessment App telah berhasil dikembangkan dengan melatih model klasifikasi menggunakan algoritma `RandomForestClassifier`. Berdasarkan hasil evaluasi, model diketahui mampu melakukan prediksi dengan cukup baik dengan akurasi mencapai 90%. Hasil uji menggunakan data Test menunjukkan bahwa model mampu memprediksi sebanyak 215 mahasiswa dropout dengan benar dari total 255 data yang diuji.
 
 
 ### Rekomendasi Action Items
