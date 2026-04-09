@@ -162,6 +162,8 @@ F. Added Information
 
 Dropout Risk App yang telah dikembangkan dapat digunakan dengan cara memberikan input data-data mahasiswa yang ingin diperiksa melalui form yang tersedia. Setelah itu, tekan tombol **Prediksi** dan sistem akan melakukan assessment terhadap data-data yang telah diberikan dan akan menghasilkan hasil penilaian tingkat risiko dropout dari mahasiswa tersebut.  
 
+![App-preview]()
+
 [Coba Dropout Risk Assessment App](https://dropout-risk-assessment.streamlit.app/)
 
 ## Conclusion
