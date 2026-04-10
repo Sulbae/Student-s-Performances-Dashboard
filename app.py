@@ -547,6 +547,7 @@ with st.form(key="form_assesment"):
 
         st.subheader("Data Input:")
         st.dataframe(data_input)
+        data_input.to_csv("data_mahasiswa_terbaru.csv", index=False)
     
         try:
             result = run_inference(data_input)
