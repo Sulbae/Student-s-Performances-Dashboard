@@ -533,21 +533,23 @@ with st.form(key="form_assesment"):
 
         if pred["dropout_risk"] >= THRESHOLD:
             st.error("### **Risiko Dropout Tinggi!**")
-            st.metric("Probabilitas", f"{pred['dropout_risk']:.2%}")
         else:
             st.success("### **Risiko Dropout Rendah!**")
-            st.metric("Probabilitas", f"{pred['dropout_risk']:.2%}")
+        st.metric("Probabilitas", f"{pred['dropout_risk']:.2%}")
 
         elapsed_time = time.time() - pred["time"]
         st.caption(f"Waktu inferensi: {elapsed_time:.2f} detik")
-    
-# Tombol simpan hasil prediksi
-if st.button("Simpan Hasil Prediksi", type="secondary", use_container_width=True):
-    try:
-        # Simpan hasil prediksi ke file CSV
+
+        # Tombol Download
+        csv_data = pred["df"].to_csv(index=False).encode("utf-8")
         timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
         filename = f"prediksi_dropout_{timestamp}.csv"
-        pred["df"].to_csv(filename, index=False)
-        st.success(f"Hasil prediksi berhasil disimpan ke {filename}")
-    except Exception as e:
-        st.error(f"Gagal menyimpan hasil prediksi: {e}")
+
+        st.download_button(
+            label="Simpan Hasil Prediksi",
+            data=csv_data,
+            file_name=filename,
+            mime="text/csv",
+            type="secondary"
+            use_container_width=True
+        )
