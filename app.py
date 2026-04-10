@@ -541,13 +541,13 @@ with st.form(key="form_assesment"):
         elapsed_time = time.time() - pred["time"]
         st.caption(f"Waktu inferensi: {elapsed_time:.2f} detik")
     
-    # Tombol simpan hasil prediksi
-    if st.button("Simpan Hasil Prediksi", type="secondary", use_container_width=True):
-        try:
-            # Simpan hasil prediksi ke file CSV
-            timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-            filename = f"prediksi_dropout_{timestamp}.csv"
-            pred["df"].to_csv(filename, index=False)
-            st.success(f"Hasil prediksi berhasil disimpan ke {filename}")
-        except Exception as e:
-            st.error(f"Gagal menyimpan hasil prediksi: {e}")
+# Tombol simpan hasil prediksi
+if st.button("Simpan Hasil Prediksi", type="secondary", use_container_width=True):
+    try:
+        # Simpan hasil prediksi ke file CSV
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+        filename = f"prediksi_dropout_{timestamp}.csv"
+        pred["df"].to_csv(filename, index=False)
+        st.success(f"Hasil prediksi berhasil disimpan ke {filename}")
+    except Exception as e:
+        st.error(f"Gagal menyimpan hasil prediksi: {e}")
