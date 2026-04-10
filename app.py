@@ -450,7 +450,7 @@ with st.form(key="form_assesment"):
 
     if submitted:
         
-        all_fields = {
+        data_dict = {
             "Student ID": student_id,
             "Marital status": marital_status,
             "Age at enrollment": age_at_enroll,
@@ -491,7 +491,7 @@ with st.form(key="form_assesment"):
         }
 
         # Cek field kosong
-        empty_fields = [key for key, value in all_fields.items() if value == "" or value is None]
+        empty_fields = [key for key, value in data_dict.items() if value == "" or value is None]
 
         if empty_fields:
             st.error("### **Data masih kosong:**")
@@ -499,93 +499,55 @@ with st.form(key="form_assesment"):
                 st.write(f"- {field}")
             st.stop()
 
-        # Mulai prediksi
-        st.write("Memproses data...")
-
-        start_time = time.time()
-
-        # Menyimpan data ke dalam DataFrame
-        data_input = pd.DataFrame([{
-            "Student ID": student_id,
-            "Marital status": marital_status,
-            "Age at enrollment": age_at_enroll,
-            "Gender": gender,
-            "International": international,
-            "Nationality": nationality,
-            "Mother's qualification": mothers_qual,
-            "Mother's occupation": mothers_occu,
-            "Father's qualification": fathers_qual,
-            "Father's occupation": fathers_occu,
-            "Displaced": displaced,
-            "Educational special needs": edu_special_needs,
-            "Course": course,
-            "Attendance": attendance,
-            "Application mode": application_mode,
-            "Application order": application_order,
-            "Admission grade": admission_grade,
-            "Previous qualification": prev_qual,
-            "Previous qualification (grade)": prev_qual_grade,
-            "Curricular units 1st sem (credited)": curr_units_1_credited,
-            "Curricular units 1st sem (enrolled)": curr_units_1_enrolled,
-            "Curricular units 1st sem (evaluations)": curr_units_1_eval,
-            "Curricular units 1st sem (approved)": curr_units_1_approved,
-            "Curricular units 1st sem (grade)": curr_units_1_grade,
-            "Curricular units 1st sem (without evaluations)": curr_units_1_without_eval,
-            "Curricular units 2nd sem (credited)": curr_units_2_credited,
-            "Curricular units 2nd sem (enrolled)": curr_units_2_enrolled,
-            "Curricular units 2nd sem (evaluations)": curr_units_2_eval,
-            "Curricular units 2nd sem (approved)": curr_units_2_approved,
-            "Curricular units 2nd sem (grade)": curr_units_2_grade,
-            "Curricular units 2nd sem (without evaluations)": curr_units_2_without_eval,
-            "Unemployment rate": unemployment_rate,
-            "Inflation rate": inflation_rate,
-            "GDP": gdp,
-            "Debtor": debtor,
-            "Tuition fees up to date": tuition_uptodate,
-            "Scholarship holder": scholarship_holder
-        }])
-
+        data_input = pd.DataFrame([data_dict])
         st.subheader("Data Input:")
         st.dataframe(data_input)
+
+        # Mulai prediksi
+        st.write("Memproses data...")
     
         try:
             result = run_inference(data_input)
             dropout_risk = result["probability"]
+            pred_status = "Dropout" if dropout_risk >= THRESHOLD else "Not Dropout"
+            data_input['Status Prediction'] = pred_status
 
-            ## Dropout Risk 
-            st.subheader("Assessment Result:")
-
-            if dropout_risk >= THRESHOLD:
-                st.error("### **Risiko Dropout Tinggi!**")
-                st.metric("Probabilitas", f"{dropout_risk:.2%}")
-            else:
-                st.success("### **Risiko Dropout Rendah!**")
-                st.metric("Probabilitas", f"{dropout_risk:.2%}")
-            
-            data_input['Status Prediction'] = "Dropout" if dropout_risk >= THRESHOLD else "Not Dropout"
-
+            # Simpan ke session state agar persist saat rerun
+            st.session_state['last_prediction'] = {
+                "df": data_input,
+                "dropout_risk": dropout_risk,
+                "pred_status": pred_status,
+                "time": time.time()
+            }
+        
         except Exception as e:
-            st.error(f"Terjadi kesalahan sistem: {e}")
-            st.exception(e)
+            st.error(f"Terjadi kesalahan saat memproses data: {e}")
+            st.session_state.pop('last_prediction', None)
+    if 'last_prediction' in st.session_state:
+        pred = st.session_state['last_prediction']
 
-        end_time = time.time()
-        elapsed_time = end_time - start_time
+        st.divider()
+
+        ## Dropout Risk 
+        st.subheader("Assessment Result:")
+
+        if pred["dropout_risk"] >= THRESHOLD:
+            st.error("### **Risiko Dropout Tinggi!**")
+            st.metric("Probabilitas", f"{pred["dropout_risk"]:.2%}")
+        else:
+            st.success("### **Risiko Dropout Rendah!**")
+            st.metric("Probabilitas", f"{pred["dropout_risk"]:.2%}")
+
+        elapsed_time = time.time() - pred["time"]
         st.caption(f"Waktu inferensi: {elapsed_time:.2f} detik")
     
     # Tombol simpan hasil prediksi
-    if submitted and MODEL is not None:
-        save_submitted = st.button(
-            "Simpan Hasil Prediksi",
-            type="secondary",
-            use_container_width=True
-        )
-
-        if save_submitted:
-            try:
-                # Simpan hasil prediksi ke file CSV
-                timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-                output_file = f"prediksi_dropout_{timestamp}.csv"
-                data_input.to_csv(output_file, index=False)
-                st.success(f"Hasil prediksi berhasil disimpan ke {output_file}")
-            except Exception as e:
-                st.error(f"Gagal menyimpan hasil prediksi: {e}")
+    if  st.button("Simpan Hasil Prediksi", type="secondary", use_container_width=True)
+        try:
+            # Simpan hasil prediksi ke file CSV
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+            filename = f"prediksi_dropout_{timestamp}.csv"
+            pred["df"].to_csv(filename, index=False)
+            st.success(f"Hasil prediksi berhasil disimpan ke {filename}")
+        except Exception as e:
+            st.error(f"Gagal menyimpan hasil prediksi: {e}")
