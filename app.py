@@ -523,33 +523,34 @@ with st.form(key="form_assesment"):
         except Exception as e:
             st.error(f"Terjadi kesalahan saat memproses data: {e}")
             st.session_state.pop('last_prediction', None)
-    if 'last_prediction' in st.session_state:
-        pred = st.session_state['last_prediction']
+            
+if 'last_prediction' in st.session_state:
+    pred = st.session_state['last_prediction']
 
-        st.divider()
+    st.divider()
 
-        ## Dropout Risk 
-        st.subheader("Assessment Result:")
+    ## Dropout Risk 
+    st.subheader("Assessment Result:")
 
-        if pred["dropout_risk"] >= THRESHOLD:
-            st.error("### **Risiko Dropout Tinggi!**")
-        else:
-            st.success("### **Risiko Dropout Rendah!**")
-        st.metric("Probabilitas", f"{pred['dropout_risk']:.2%}")
+    if pred["dropout_risk"] >= THRESHOLD:
+        st.error("### **Risiko Dropout Tinggi!**")
+    else:
+        st.success("### **Risiko Dropout Rendah!**")
+    st.metric("Probabilitas", f"{pred['dropout_risk']:.2%}")
 
-        elapsed_time = time.time() - pred["time"]
-        st.caption(f"Waktu inferensi: {elapsed_time:.2f} detik")
+    elapsed_time = time.time() - pred["time"]
+    st.caption(f"Waktu inferensi: {elapsed_time:.2f} detik")
 
-        # Tombol Download
-        csv_data = pred["df"].to_csv(index=False).encode("utf-8")
-        timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-        filename = f"prediksi_dropout_{timestamp}.csv"
+    # Tombol Download
+    csv_data = pred["df"].to_csv(index=False).encode("utf-8")
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    filename = f"prediksi_dropout_{timestamp}.csv"
 
-        st.download_button(
-            label="Simpan Hasil Prediksi",
-            data=csv_data,
-            file_name=filename,
-            mime="text/csv",
-            type="secondary",
-            use_container_width=True
-        )
+    st.download_button(
+        label="Simpan Hasil Prediksi",
+        data=csv_data,
+        file_name=filename,
+        mime="text/csv",
+        type="secondary",
+        use_container_width=True
+    )
