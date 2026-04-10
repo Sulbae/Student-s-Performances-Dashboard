@@ -547,7 +547,6 @@ with st.form(key="form_assesment"):
 
         st.subheader("Data Input:")
         st.dataframe(data_input)
-        data_input.to_csv("data_mahasiswa_terbaru.csv", index=False)
     
         try:
             result = run_inference(data_input)
@@ -562,6 +561,10 @@ with st.form(key="form_assesment"):
             else:
                 st.success("### **Risiko Dropout Rendah!**")
                 st.metric("Probabilitas", f"{dropout_risk:.2%}")
+            
+            data_input['Status Prediction'] = "Dropout" if dropout_risk >= THRESHOLD else "Not Dropout"
+            
+            data_input.to_csv("data_mahasiswa.csv", index=False)
 
         except Exception as e:
             st.error(f"Terjadi kesalahan sistem: {e}")
