@@ -564,7 +564,9 @@ with st.form(key="form_assesment"):
             
             data_input['Status Prediction'] = "Dropout" if dropout_risk >= THRESHOLD else "Not Dropout"
             
-            data_input.to_csv("data_mahasiswa.csv", index=False)
+            added_data = st.dataframe(data_input)
+
+            added_data.to_csv("data_mahasiswa.csv", index=False)
 
         except Exception as e:
             st.error(f"Terjadi kesalahan sistem: {e}")
