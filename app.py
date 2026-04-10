@@ -550,6 +550,6 @@ with st.form(key="form_assesment"):
             data=csv_data,
             file_name=filename,
             mime="text/csv",
-            type="secondary"
+            type="secondary",
             use_container_width=True
         )
