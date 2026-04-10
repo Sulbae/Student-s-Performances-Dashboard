@@ -542,7 +542,7 @@ with st.form(key="form_assesment"):
         st.caption(f"Waktu inferensi: {elapsed_time:.2f} detik")
     
     # Tombol simpan hasil prediksi
-    if st.button("Simpan Hasil Prediksi"):
+    if st.button("Simpan Hasil Prediksi", type="secondary", use_container_width=True):
         try:
             # Simpan hasil prediksi ke file CSV
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
