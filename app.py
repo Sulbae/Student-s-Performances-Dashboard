@@ -533,10 +533,10 @@ with st.form(key="form_assesment"):
 
         if pred["dropout_risk"] >= THRESHOLD:
             st.error("### **Risiko Dropout Tinggi!**")
-            st.metric("Probabilitas", f"{pred["dropout_risk"]:.2%}")
+            st.metric("Probabilitas", f"{pred['dropout_risk']:.2%}")
         else:
             st.success("### **Risiko Dropout Rendah!**")
-            st.metric("Probabilitas", f"{pred["dropout_risk"]:.2%}")
+            st.metric("Probabilitas", f"{pred['dropout_risk']:.2%}")
 
         elapsed_time = time.time() - pred["time"]
         st.caption(f"Waktu inferensi: {elapsed_time:.2f} detik")
