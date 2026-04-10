@@ -563,10 +563,6 @@ with st.form(key="form_assesment"):
                 st.metric("Probabilitas", f"{dropout_risk:.2%}")
             
             data_input['Status Prediction'] = "Dropout" if dropout_risk >= THRESHOLD else "Not Dropout"
-            
-            added_data = st.dataframe(data_input)
-
-            added_data.to_csv("data_mahasiswa.csv", index=False)
 
         except Exception as e:
             st.error(f"Terjadi kesalahan sistem: {e}")
@@ -575,3 +571,21 @@ with st.form(key="form_assesment"):
         end_time = time.time()
         elapsed_time = end_time - start_time
         st.caption(f"Waktu inferensi: {elapsed_time:.2f} detik")
+    
+    # Tombol simpan hasil prediksi
+    if submitted and MODEL is not None:
+        save_submitted = st.button(
+            "Simpan Hasil Prediksi",
+            type="secondary",
+            use_container_width=True
+        )
+
+        if save_submitted:
+            try:
+                # Simpan hasil prediksi ke file CSV
+                timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+                output_file = f"prediksi_dropout_{timestamp}.csv"
+                data_input.to_csv(output_file, index=False)
+                st.success(f"Hasil prediksi berhasil disimpan ke {output_file}")
+            except Exception as e:
+                st.error(f"Gagal menyimpan hasil prediksi: {e}")
